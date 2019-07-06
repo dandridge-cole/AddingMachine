@@ -46,5 +46,5 @@ class Node<T> {
     }
 
 }
-var ops :KrisStack<String> = new KrisStack;
-var vals:KrisStack<String> = new KrisStack; 
+// var ops :KrisStack<String> = new KrisStack;
+// var vals:KrisStack<String> = new KrisStack; 

@@ -1,9 +1,9 @@
 
 <div id="input-output">
-    <form id="input">
-        <textarea name="output" style="height:100pt; width: 50%">Output goes here. {{log}}</textarea>
+    <form id="input-output-form">
+        <textarea name="output" style="height:100pt; width: 50%">{{output}}</textarea>
             <hr />
-        <textarea name="input" placeholder="> "></textarea>
-       <button type="submit">Submit</button>
+        <textarea name="input" #input placeholder="> ">> </textarea>
+       <button type="button" (click)="compute(input.value)">Compute</button> 
     </form>
 </div>

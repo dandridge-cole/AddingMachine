@@ -13,11 +13,13 @@ export class TextInputComponent implements OnInit {
   ngOnInit() {
   }
 
-  toOutput: Number;
+ // toOutput: Number;
+  output: String = ""; 
   eval: Evaluator;
 
-  compute(input: String){
-    this.toOutput = this.eval.run(input);
+  compute(inputValue: String){
+    let toOutput = this.eval.run(inputValue);
+    this.output+="> "+inputValue+"/n";
+    this.output+=">> "+toOutput+"/n/n";
   }
-
 }
