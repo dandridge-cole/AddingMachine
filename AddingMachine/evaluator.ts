@@ -11,7 +11,6 @@ export default class Evaluator{
     public Calculate() { }
     
     public run(toEvaluate:String):number {
-
         var tokens = toEvaluate.split(" ");
         for (var token of tokens) {
             if      (token == "(") {}
@@ -19,6 +18,7 @@ export default class Evaluator{
             else if (token == ("-"))    this.ops.push(token);
             else if (token == ("*"))    this.ops.push(token);
             else if (token == ("/"))    this.ops.push(token);
+            else if (token == ("%"))    this.ops.push(token);
             else if (token == ("sqrt")) this.ops.push(token);
             else if (token == (")")) {
                 let op = this.ops.pop();
@@ -27,6 +27,7 @@ export default class Evaluator{
                 else if (op == ("-"))    v = this.vals.pop() - v;
                 else if (op == ("*"))    v = this.vals.pop() * v;
                 else if (op == ("/"))    v = this.vals.pop() / v;
+                else if (op == ("%"))    v = this.vals.pop() % v;
                 else if (op == ("sqrt")) v = Math.sqrt(v);
                 this.vals.push(v);
             } 

@@ -15,11 +15,12 @@ export class TextInputComponent implements OnInit {
 
  // toOutput: Number;
   output: String = ""; 
-  eval: Evaluator;
+  eval: Evaluator = new Evaluator;
 
   compute(inputValue: String){
+    if(inputValue.charAt(0)=='>') inputValue = inputValue.substr(1);
     let toOutput = this.eval.run(inputValue);
-    this.output+="> "+inputValue+"/n";
-    this.output+=">> "+toOutput+"/n/n";
+    this.output+="> "+inputValue+"\n";
+    this.output+=">> "+toOutput+"\n\n";
   }
 }
