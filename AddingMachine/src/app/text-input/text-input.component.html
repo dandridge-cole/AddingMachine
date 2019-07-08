@@ -4,8 +4,8 @@
         <textarea name="output" style="height:100pt; width: 50%">{{output}}</textarea>
        <!--<h3>{{output}}</h3>-->
             <hr />
-        <textarea name="input" #input placeholder="> " #input>> </textarea>
-       <button type="button" (click)="compute(input.value)">Compute</button> 
+        <textarea name="input" #input placeholder="> ">> </textarea>
+       <button type="button" (click)="compute(input.value);input.value='> '">Compute</button> 
     </form>
     
 </div>
